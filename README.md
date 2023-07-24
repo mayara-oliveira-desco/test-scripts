@@ -1,2 +1,3 @@
 # test-scripts
 Example/test scripts for the ENADE to objective conversion task.
+## I did what I could, as I don't have access to the database tables, I don't know how the data is, I don't know how it's organized...

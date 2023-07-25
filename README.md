@@ -14,5 +14,5 @@ Vamos precisar gerar ids aleatórios pra cada nova alternativa e ter os valores 
 ## Vale ressaltar
 Eu nao possuo acesso ao banco do Dex, entao nao consegui testar.. de qualquer forma o código vai ter que ser adaptado.
 
-obs: Este script modifica os arrays 'assertions' e 'texts' em memória.
+obs: Este script modifica os arrays `assertions` e `texts` em memória.
 O código tem que ser adaptado para que essas mudancas reflitam no banco.

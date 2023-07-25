@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 // testes iniciais
+=======
+// Como nao tenho acesso ao banco do Dex, eu fiz só alguns testes aqui no console mesmo.
+// entao vai ter que ser adaptado.
+>>>>>>> origin/main
 
 
 // Supondo que a pergunta seja:

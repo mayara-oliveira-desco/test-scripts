@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Discovery de conversão de questões ENADE pra objetiva
 Apenas um script de exemplo da [task](https://app.shortcut.com/teamassessments/story/100405/importa%C3%A7%C3%A3o-dos-enunciados-das-quest%C3%B5es-dissertativas-para-m%C3%BAltipla-escolha) de discovery de conversão de discursiva pra objetiva. 
 
@@ -17,3 +18,8 @@ Eu nao possuo acesso ao banco do Dex, entao nao consegui testar.. de qualquer fo
 obs: Este script modifica os arrays 'assertions' e 'texts' em memória.
 O código tem que ser adaptado para que essas mudancas reflitam no banco.
 
+=======
+# test-scripts
+Example/test scripts for the ENADE to objective conversion task.
+## I did what I could, as I don't have access to the db tables, I don't know how the data is, I don't know how it's organized...
+>>>>>>> origin/main

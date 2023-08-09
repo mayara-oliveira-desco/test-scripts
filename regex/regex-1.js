@@ -1,0 +1,8 @@
+const text = '<p>Leia o texto abaixo:<br></p><p style="text-align: justify">O uso do ionic storage permite ao desenvolvedor ter uma mesma API de persistência independente do suporte físico existente, de tal forma que com uma API simples pode-se trocar a implementação de storage suportada pelo dispositivo, permitindo testes em ambientes que não tem suporte ao SQLite nativo como nos navegadores e fazendo o fallback automático para o SQLite quando em um dispositivo. O uso dessa técnica também possui desvantagens.</p><p style="text-align: justify">Qual a principal desvantagem do uso do ionic storage comparado ao uso do SQLite nativo?</p><p style="text-align: justify">a) A performance é menor devido às diversas abstrações que a API tem que fazer para persistir em dispositivos conforme o driver disponível.<br>b) É mais complexo de se implementar do que o uso da API SQL do SQLite, levando mais tempo para desenvolver.<br>c) O uso de uma abstração mais simples que funcione em bancos chave valor, esconde recursos existentes na implementação do SQLite que podem ser úteis.<br>d) A API não é compatível com SQLite e persiste os itens em um banco chave valor quando estiver em um dispositivo mobile.<br>e) Com o uso da API o desenvolvedor perde suporte a dispositivos móveis pois a API somente persiste em bancos de navegadores web.</p>';
+const regex = /([a-e])\) (.*?)<br>/g;
+
+for (const match of text.matchAll(regex)) {
+  const letter = match[1];
+  const alternativeText = match[2];
+  console.log(`${letter}) ${alternativeText}`);
+}

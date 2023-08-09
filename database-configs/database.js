@@ -1,13 +1,4 @@
-const { Pool } = require('pg');
-require('dotenv').config();
-
-const pool = new Pool({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME
-});
+const pool = require('./database-configs/dbConfig');
 
 pool.query('SELECT NOW()', (err, res) => {
   if (err) {
@@ -18,3 +9,7 @@ pool.query('SELECT NOW()', (err, res) => {
     pool.end();
   }
 });
+
+// pool.end()
+//   .then(() => console.log('Desconectado do banco de dados.'))
+//   .catch(err => console.error('Erro ao desconectar do banco de dados.', err));

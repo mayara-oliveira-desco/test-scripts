@@ -20,9 +20,9 @@ As alternativas extraídas das questões antigas sao removidas [02-remover-alter
 É difícil (se não impossível) definir um único regex para capturar todas as alternativas, pois cada tutor formata o enunciado de um jeito. Portanto, provavelmente, será necessário reprocessar com outro padrão regex.
 
 ## Instruções para execução dos scripts
-- Adicionar no arquivo [questionIds](./questionIds.js) os `dexExerciseId` das questoes que vao ser alteradas de modelo.
+- Gerar o arquivo [idsHygraph](./idsHygraph.js) e [questionIds](./questionIds.js) com as questoes que vao ser alteradas de modelo.
 - Adicionar no arquivo [corrects](./corrects.js) as `positions` das respostas corretas.
-- Adicionar no arquivo [idsHygraph](./idsHygraph.js) os `ids` dos exercicios.
+
 ### Ordem
 1. 00-pegar-textId
 2. 01-pegar-alternativas
@@ -32,3 +32,22 @@ As alternativas extraídas das questões antigas sao removidas [02-remover-alter
 6. 05-insere-contents
 
 **E atualizar o tipo no Hygraph :)**
+
+```js
+  mutation updateExercise($ids: [ID], $type: FaculExerciseType) {
+    updateManyFaculExercisesConnection(where: {id_in: $ids}, data: {type: $type}) {
+      edges{
+          node{
+              id
+          }
+      }
+    }
+    publishManyFaculExercisesConnection(where: {id_in: $ids}, to: PUBLISHED) {
+       edges{
+          node{
+              id
+          }
+      }
+    }
+  }
+  ```

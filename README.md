@@ -23,7 +23,8 @@ As alternativas extraídas das questões antigas sao removidas [02-remover-alter
 - Gerar o arquivo [idsHygraph](./idsHygraph.js) e [questionIds](./questionIds.js) com as questoes que vao ser alteradas de modelo.
 - Adicionar no arquivo [corrects](./corrects.js) as `positions` das respostas corretas.
 
-### Ordem
+### Ordem de execução 
+1. extrai-ids.js (cole o objeto do Hy aqui como ele vem, e execute o script. Ele vai gerar 2 arquivos -> questionIds e idsHygraph)
 1. 00-pegar-textId
 2. 01-pegar-alternativas
 3. 02-remover-alternativas
@@ -31,6 +32,7 @@ As alternativas extraídas das questões antigas sao removidas [02-remover-alter
 5. 04-inserir-alternativas-texts
 6. 05-insere-contents
 
+Depois, rode o script `gerar-objetos-hy`para criar as query's no Hygraph
 **E atualizar o tipo no Hygraph :)**
 
 ```js
@@ -51,3 +53,5 @@ As alternativas extraídas das questões antigas sao removidas [02-remover-alter
     }
   }
   ```
+
+Já quero pedir desculpa desde já pq nao consegui fazer um arquivo só, foi mais fácil pra mim construir ele assim todo dividido 🥺

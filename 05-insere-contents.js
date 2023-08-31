@@ -1,7 +1,7 @@
 const fs = require('fs');
 const pool = require('./database-configs/dbConfig');
 
-const userId = '1321599'; // User ID fixo
+const userId = '1321599'; // User ID fixo (esse é o meu :) )
 const position = 0; // Position fixa
 
 async function insertContents() {

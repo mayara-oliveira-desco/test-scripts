@@ -12,7 +12,7 @@ async function insertAssertions(textId, questionId, alternatives, correctPositio
 
   for (const alternative of alternatives) {
     const assertion_id = "55" + String(Math.floor(Math.random() * 90000) + 10000);
-    const correct = alternative.position === correctPosition; // Determinando o valor correto com base na posição
+    const correct = alternative.position === correctPosition;
 
     try {
       await pool.query(

@@ -22,7 +22,7 @@ function removeAlternatives(body, alternatives) {
   let content = body;
 
   for (const alternative of alternatives) {
-    // Construa uma regex para encontrar a alternativa exata no corpo do texto
+
     const regex = new RegExp(`${alternative.letter}\\) ${alternative.text}`, 'g');
     content = content.replace(regex, '');
   }
@@ -43,12 +43,12 @@ async function processData() {
   const fileContent = fs.readFileSync('text_ids.json', 'utf8');
   const textData = JSON.parse(fileContent);
 
-  // Mapa para guardar os text_id's que serão usados na consulta ao banco de dados
+  // Mapa para guardar os text_id's que serão usados na consulta ao db
   const textIds = textData.map(item => item.text_id);
   const data = await queryTextsById(textIds);
 
   for (let i = 0; i < data.length; i++) {
-    // Encontre as alternativas correspondentes a este item de dados no arquivo text_ids.json
+    // Encontra as alternativas correspondentes a este item de dados no arquivo text_ids.json
     const alternatives = textData[i].alternatives;
     const updatedBody = removeAlternatives(data[i].body, alternatives);
     await updateDatabase(data[i].id, updatedBody);

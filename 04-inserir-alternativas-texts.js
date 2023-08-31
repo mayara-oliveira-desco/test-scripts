@@ -2,7 +2,7 @@ const fs = require('fs');
 const pool = require('./database-configs/dbConfig');
 
 async function insertTexts(textIdsData) {
-  const userId = '1321599'; // User ID fixo
+  const userId = '1321599'; // User ID fixo (esse é o meu :) )
 
   for (const item of textIdsData) {
     const questionId = item.question_id;
